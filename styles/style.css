@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+/*
 @font-face {
   font-family: "JakartaSans";
   src: url("../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
 }
+*/
+
 * {
   padding: 0px;
   margin: 0px;
 }
 
 html {
+  /*
   font-family: "JakartaSans";
+  */
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 100%;
   line-height: 1.3em;
 }
