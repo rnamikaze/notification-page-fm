@@ -1,0 +1,240 @@
+@font-face {
+  font-family: "JakartaSans";
+  src: url("../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  font-family: "JakartaSans";
+  font-size: 100%;
+  line-height: 1.3em;
+}
+
+body {
+  width: 100vw;
+  height: max-content;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: hsl(210, 60%, 98%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+main {
+  width: 50%;
+  height: max-content;
+  background-color: hsl(0, 0%, 100%);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(203, 203, 203, 0.286);
+  box-sizing: border-box;
+  margin: 20px 0px;
+}
+
+#notification-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  margin-bottom: 20px;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+#title h1 {
+  font-size: 1.4em;
+}
+
+#count {
+  background-color: hsl(219, 85%, 26%);
+  border-radius: 6px;
+  padding: 2px 10px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 800;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#read-mark {
+  color: hsl(219, 12%, 42%);
+  font-size: 16px;
+  transition: 250ms ease-in;
+  cursor: pointer;
+}
+
+#read-mark:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+#notification-body * {
+  font-size: 16px;
+}
+
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  margin: 10px 0px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+.notification-item.unread {
+  background-color: hsl(210, 60%, 98%);
+  border: 1px solid hsla(211, 68%, 94%, 0.4);
+}
+
+.notification-item > * {
+  display: flex;
+}
+
+.notification-item > .notification-image {
+  display: flex;
+  align-self: center;
+  margin-right: 10px;
+}
+
+.notification-item > .notification-image > img {
+  width: 45px;
+  height: 45px;
+}
+
+.item-photo {
+  display: flex;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
+.item-photo img {
+  max-width: 45px;
+  max-height: 45px;
+}
+
+.item-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-body .item-head {
+  color: hsl(219, 12%, 42%);
+}
+
+.item-body .item-head > .user-display-name {
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+  text-decoration: none;
+  transition: 250ms ease-in;
+}
+
+.item-body .item-head > .user-display-name:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.item-body .item-head > .unread-icon {
+  background-color: hsl(1, 90%, 64%);
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.item-body .item-head > .activity {
+  color: hsl(219, 12%, 42%);
+  font-weight: 800;
+  text-decoration: none;
+  transition: 250ms ease-in;
+}
+
+.item-body .item-head > .activity.group {
+  color: hsl(219, 85%, 26%);
+}
+
+.item-body .item-head > .activity:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.notification-item .item-body .item-head > .activity.group:hover {
+  color: hsl(219, 12%, 42%);
+}
+
+.notification-item.unread .item-body .item-head > .activity.group:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.item-body > .time {
+  color: hsl(219, 14%, 63%);
+}
+
+.item-body > .message {
+  border: 1px solid hsl(205, 33%, 90%);
+  border-radius: 5px;
+  padding: 12px 15px;
+  margin: 12px 0px 7px 0px;
+  color: hsl(219, 12%, 42%);
+  cursor: pointer;
+  transition: 250ms ease-in;
+}
+
+.item-body > .message:hover {
+  background-color: hsl(211, 68%, 94%);
+}
+
+.attribution {
+  background-color: hsl(0, 0%, 100%);
+  position: fixed;
+  bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.335);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1430px) and (min-height: 950px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 240px) and (max-width: 480px) and (min-height: 600px) {
+  html {
+    font-size: 90%;
+  }
+  body {
+    height: max-content;
+  }
+  #count {
+    border-radius: 5px;
+  }
+  #notification-body * {
+    font-size: 1em;
+  }
+  main {
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 20px 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
