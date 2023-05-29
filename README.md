@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Vercel](https://your-live-site-url.com)
+- Live Site URL: [GitHub Pages](https://rnamikaze.github.io/notification-page-fm/)
 
 ## My process
 
